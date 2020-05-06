@@ -1,3 +1,5 @@
+# liberally lifted/adapted from https://github.com/mobeets/cover-art
+
 import os
 import time
 import glob
@@ -74,8 +76,8 @@ def find_and_download_image(d, query, outname, outdir, kind):
     # ext = '.png'
     outfile = os.path.join(outdir, outname + ext)
     save_image(im_url, d, outfile)
-    print(query)
-    print('    Saved {0}'.format(outfile))
+    # print(query)
+    print('Saved {0}'.format(outfile))
 
 def get_album_info(line):
     ps = line.split("'s")
@@ -122,17 +124,23 @@ def parse(content):
             lines.append(line)
     return lines
 
-def load(infile):
-    with open(infile) as f:
-        out = unidecode.unidecode(f.read())
-        return out.split('-----')[0] # keep everything before -----
+# def load(infile):
+#     with open(infile) as f:
+#         out = unidecode.unidecode(f.read())
+#         return out.split('-----')[0] # keep everything before -----
+
+def readlist(inlist):
+    for line in inlist:
+        print(line)cover
 
 def main(infile, outdir):
     d = discogs_client.Client('ExampleApplication/0.1', user_token="VzzJJATOLvHNkPbxLNkMhAasGDUXKscYoWfgzUnV")
     kind="album"
     get_info=False
-    lines = parse(load(infile))
-    for i, line in enumerate(lines):
+
+    # lines = parse(load(infile))
+    #for i, line in enumerate(infile):
+    for i, line in enumerate(infile):
         query = line
         if get_info and d is not None:
             print_info(d, line, kind, i)

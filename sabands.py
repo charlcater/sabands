@@ -62,7 +62,3 @@ if __name__ == "__main__":
     inputFile1 = sys.argv[1]
 
     getalbums(inputFile1)
-
-    coverart.main('out.txt', 'out')
-
-
