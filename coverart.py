@@ -129,10 +129,6 @@ def parse(content):
 #         out = unidecode.unidecode(f.read())
 #         return out.split('-----')[0] # keep everything before -----
 
-def readlist(inlist):
-    for line in inlist:
-        print(line)cover
-
 def main(infile, outdir):
     d = discogs_client.Client('ExampleApplication/0.1', user_token="VzzJJATOLvHNkPbxLNkMhAasGDUXKscYoWfgzUnV")
     kind="album"
