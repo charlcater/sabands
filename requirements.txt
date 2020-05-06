@@ -1,0 +1,4 @@
+matplotlib==3.*
+pandas
+unidecode
+discogs_client
