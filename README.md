@@ -1,7 +1,9 @@
 # sabands
 
-Usage: `$python3 sabands.py <input_list.csv>` 
- eg: $_python3 sabands.py sabands.csv_
+Run the Jupyter notebook for the latest version
+
+~Usage: `$python3 sabands.py <input_list.csv>` 
+ eg: $_python3 sabands.py sabands.csv_Z
 
 Outputs 'out.txt' with two albums, and cover art (if available) in the folder _'out'_. This file is overwritten each time.
 
